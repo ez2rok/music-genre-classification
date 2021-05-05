@@ -14,20 +14,16 @@ SAMPLES_PER_TRACK = SAMPLE_RATE * TRACK_DURATION
 
 
 def get_mfcc_segment_values(num_segments, hop_length):
-    """ compute values associated with the mfcc of each song segment """
+    """ compute values associated with the mfcc of each song segment"""
 
     samples_per_segment = int(SAMPLES_PER_TRACK / num_segments)
     num_mfcc_vectors_per_segment = math.ceil(samples_per_segment / hop_length)
-
     return samples_per_segment, num_mfcc_vectors_per_segment
 
 
 def not_a_genre_directory(root, dataset_path):
     """ determine if the root directory is a genre directory
-
-    ---- Explanation ----
-    All directories except for the dataset_path are genre directories 
-    """
+    All directories except for the dataset_path are genre directories """
 
     return root is dataset_path
 
@@ -51,14 +47,14 @@ def get_file_path(root, f):
 def get_audio_signal(file_path):
     """ get the audio signal of a file """
 
-    signal, _ = librosa.load(file_path, sr=SAMPLE_RATE)
+    signal, sr = librosa.load(file_path, sr=SAMPLE_RATE)
     return signal
 
 
 def get_mfcc(signal, samples_per_segment, n_mfcc, n_fft, hop_length, s):
     """ compute the mfcc of a song segment """
 
-    # compute start and end of the song segment
+    # compute the start and end of the song segment
     start = samples_per_segment * s
     finish = start + samples_per_segment
 
