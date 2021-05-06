@@ -102,7 +102,7 @@ def write_data_to_json_file(data, json_path):
         json.dump(data, fp, indent=4)
 
 
-def create_inputs(dataset_path, json_path, n_mfcc=13, n_fft=2048, hop_length=512, num_segments=10):
+def get_model_inputs(dataset_path, json_path, n_mfcc=13, n_fft=2048, hop_length=512, num_segments=10):
     """ extract MFCCs from music dataset and saves them into a json file with genre labels
 
     ---- Parameters ----
@@ -155,4 +155,6 @@ def create_inputs(dataset_path, json_path, n_mfcc=13, n_fft=2048, hop_length=512
 
 
 if __name__ == "__main__":
-    create_inputs(DATASET_PATH, JSON_PATH, num_segments=10)
+    
+    # this takes approximately five minutes to run
+    get_model_inputs(DATASET_PATH, JSON_PATH, num_segments=10)
