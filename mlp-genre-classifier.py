@@ -35,7 +35,7 @@ def plot_history(history):
     axs[0].plot(history.history['val_accuracy'], label="test accuracy")
     axs[0].set_ylabel('Accuracy')
     axs[0].legend(loc='lower right')
-    axs[0].set_title('Model Accuracy')
+    axs[0].set_title('Multilayer Perceptron (MLP) Accuracy')
 
     # error/loss subplot
     axs[1].plot(history.history['loss'], label="train error")
@@ -43,7 +43,7 @@ def plot_history(history):
     axs[1].set_ylabel('Error')
     axs[1].set_xlabel('Epoch')
     axs[1].legend(loc='upper right')
-    axs[1].set_title('Model Error')
+    axs[1].set_title('Multilayer Perceptron (MLP) Error')
 
     plt.show()
 
