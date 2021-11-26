@@ -1,5 +1,10 @@
+## Music Genre Classification
 Classify raw audio by musical genre with deep learning techniques.
 
+### Results
+
+
+### Download the Dataset
 The dataset used here is the GTZAN Genre Dataset which is available 
 in two different places:
 1) It can be found on the Marsyas (Music Analysis, Retrieval and Synthesis 
@@ -15,6 +20,7 @@ delete it from the data you download and manually replace it with the valid
 version found here:
 https://www.kaggle.com/andradaolteanu/gtzan-dataset-music-genre-classification/discussion/158649.
 
+### Source
 The idea, methodology, and code for this project were inspired by Valerio
 Velardo's youtube series titled 'Deep Learning (for audio) with Python'. This
 tutorial series can be found here:
