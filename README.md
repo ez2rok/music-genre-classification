@@ -2,7 +2,7 @@
 Classify raw audio by musical genre with deep learning techniques.
 
 ### Results
-
+[My Results](mlp-graph.png)
 
 ### Download the Dataset
 The dataset used here is the GTZAN Genre Dataset which is available 
