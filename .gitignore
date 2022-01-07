@@ -6,5 +6,6 @@
 
 # ignore the data directory and files created while downloading the data
 genres/**
-data/**
+data/raw**
+data/processed**
 temporary_genre_dataset.tar.gz

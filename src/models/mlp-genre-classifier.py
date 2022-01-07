@@ -8,22 +8,19 @@ import matplotlib.pyplot as plt
 DATASET_PATH = "model-inputs.json"
 
 
-# load data
 def load_data(dataset_path):
 
+    # load the dataset
     with open(dataset_path, "r") as fp:
         data = json.load(fp)
 
     # convert lists into numpy arrays
-    inputs = np.array(data["mfcc"])
-    targets = np.array(data["labels"])
-
-    # get number of genres
+    X = np.array(data["mfcc"])
+    y = np.array(data["labels"])
     n_outputs = len(data["mapping"])
 
     print("Data succesfully loaded")
-
-    return inputs, targets, n_outputs
+    return X, y, n_outputs
 
 
 def plot_history(history):
