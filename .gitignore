@@ -1,2 +1,10 @@
-GTZAN-genre-dataset/*
-model-inputs.json
+# ignore pycache directory
+**/__pycache__
+
+# ignore .vscode directory
+.vscode/**
+
+# ignore the data directory and files created while downloading the data
+genres/**
+data/**
+temporary_genre_dataset.tar.gz
