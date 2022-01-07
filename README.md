@@ -1,5 +1,5 @@
 ## Music Genre Classification
-Classify raw audio by musical genre with deep learning techniques.
+Classify songs by musical genre with deep learning techniques.
 
 ### Results
 ![My Results](mlp-graph.png)
